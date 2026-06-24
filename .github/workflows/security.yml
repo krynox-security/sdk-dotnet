@@ -1,0 +1,75 @@
+# GitHub Actions — Security scanning (OpenGrep SAST + gitleaks secret detection).
+# Replaces the former GitLab "SAST + Secret Detection" pipeline. OpenGrep is the
+# open-source (LGPL) Semgrep fork — works on private repos with no GitHub Advanced
+# Security, and (unlike CodeQL) covers every language we ship, including PHP.
+#
+# Gating policy: the build FAILS only on HIGH/CRITICAL findings (SARIF level "error",
+# i.e. OpenGrep severity ERROR). Lower-severity findings (warning/info) are still
+# reported to the Security tab but never block. Secret detection always blocks.
+# This file is identical across all Krynox repos.
+name: Security
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 3 * * 1' # weekly, Monday 03:00 UTC
+
+permissions:
+  contents: read
+
+jobs:
+  opengrep:
+    name: OpenGrep (SAST)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write # upload SARIF to the Security tab (needs GHAS on private repos)
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install OpenGrep
+        run: curl -fsSL https://raw.githubusercontent.com/opengrep/opengrep/main/install.sh | bash
+      - name: Scan
+        run: |
+          OPENGREP="$(command -v opengrep || true)"
+          [ -z "$OPENGREP" ] && OPENGREP="$(find "$HOME/.opengrep" -name opengrep -type f 2>/dev/null | head -1)"
+          # Community ruleset (Semgrep-compatible). Narrow to rules/<lang> for speed if needed.
+          git clone --depth 1 https://github.com/opengrep/opengrep-rules rules
+          # Full scan → SARIF (all severities). Never fails here; gating happens below.
+          "$OPENGREP" scan --sarif-output=opengrep.sarif -f rules . || true
+      - name: Upload SARIF to code scanning
+        if: always()
+        continue-on-error: true # no-op if code scanning / GHAS isn't enabled
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: opengrep.sarif
+      - name: Gate — fail only on HIGH/CRITICAL findings
+        if: always()
+        run: |
+          [ -f opengrep.sarif ] || { echo "no SARIF produced — skipping gate"; exit 0; }
+          n=$(jq '[.runs[]?.results[]? | select(.level=="error")] | length' opengrep.sarif)
+          echo "High/critical (ERROR-level) findings: ${n:-0}"
+          if [ "${n:-0}" -gt 0 ]; then
+            echo "::error::${n} high/critical SAST finding(s) — failing the build."
+            jq -r '.runs[]?.results[]? | select(.level=="error")
+                   | "  - " + (.ruleId // "?") + ": " + (.message.text // "")' opengrep.sarif | head -30
+            exit 1
+          fi
+          echo "✓ no high/critical findings — build passes"
+
+  secret-scan:
+    name: Secret Detection (gitleaks)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install gitleaks
+        run: |
+          url="$(curl -sSf https://api.github.com/repos/gitleaks/gitleaks/releases/latest \
+            | grep browser_download_url | grep linux_x64.tar.gz | head -1 | cut -d'"' -f4)"
+          curl -sSfL "$url" | sudo tar -xz -C /usr/local/bin gitleaks
+      - name: Scan for secrets
+        run: gitleaks detect --source . --redact --verbose --no-banner

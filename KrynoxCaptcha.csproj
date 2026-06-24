@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+
+    <PackageId>Krynox.Captcha</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Krynox</Authors>
+    <Description>Official server-side verification SDK for Krynox Captcha.</Description>
+    <PackageProjectUrl>https://krynox.id</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/krynox-security/sdk-dotnet</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
