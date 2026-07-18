@@ -73,4 +73,4 @@ Error codes: `KrynoxErrorCode.RateLimited`, etc.
 
 Self-hosting? Pass an endpoint like `https://captcha.your-domain/siteverify`.
 
-MIT licensed. Docs: <https://krynox.net/docs>
+MIT licensed. Docs: <https://docs.krynox.net>
