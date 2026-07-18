@@ -7,10 +7,10 @@
     <ImplicitUsings>disable</ImplicitUsings>
 
     <PackageId>Krynox.Captcha</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
     <Authors>Krynox</Authors>
     <Description>Official server-side verification SDK for Krynox Captcha.</Description>
-    <PackageProjectUrl>https://krynox.id</PackageProjectUrl>
+    <PackageProjectUrl>https://krynox.net</PackageProjectUrl>
     <RepositoryUrl>https://github.com/krynox-security/sdk-dotnet</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
