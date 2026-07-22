@@ -28,21 +28,31 @@ jobs:
       contents: read
       security-events: write # upload SARIF to the Security tab (needs GHAS on private repos)
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
       - name: Install OpenGrep
-        run: curl -fsSL https://raw.githubusercontent.com/opengrep/opengrep/main/install.sh | bash
+        run: |
+          set -euo pipefail
+          url="https://github.com/opengrep/opengrep/releases/download/v1.25.0/opengrep_manylinux_x86"
+          curl -fsSL "$url" -o /tmp/opengrep
+          echo "9ac4aebb47ba3f7b0d8fc641ac8749cb6c2f253f616131a67d9631e00d4bea33  /tmp/opengrep" | sha256sum -c -
+          sudo install -m 0755 /tmp/opengrep /usr/local/bin/opengrep
       - name: Scan
         run: |
           OPENGREP="$(command -v opengrep || true)"
           [ -z "$OPENGREP" ] && OPENGREP="$(find "$HOME/.opengrep" -name opengrep -type f 2>/dev/null | head -1)"
           # Community ruleset (Semgrep-compatible). Narrow to rules/<lang> for speed if needed.
-          git clone --depth 1 https://github.com/opengrep/opengrep-rules rules
+          rules_sha="f1d2b562b414783763fd02a6ed2736eaed622efa"
+          git init -q rules
+          git -C rules remote add origin https://github.com/opengrep/opengrep-rules.git
+          git -C rules fetch -q --depth 1 origin "$rules_sha"
+          git -C rules checkout -q --detach FETCH_HEAD
+          test "$(git -C rules rev-parse HEAD)" = "$rules_sha"
           # Full scan → SARIF (all severities). Never fails here; gating happens below.
           "$OPENGREP" scan --sarif-output=opengrep.sarif -f rules . || true
       - name: Upload SARIF to code scanning
         if: always()
         continue-on-error: true # no-op if code scanning / GHAS isn't enabled
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@b7351df727350dca84cb9d725d57dcf5bc82ba26 # v3
         with:
           sarif_file: opengrep.sarif
       - name: Gate — fail only on HIGH/CRITICAL findings
@@ -63,13 +73,16 @@ jobs:
     name: Secret Detection (gitleaks)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           fetch-depth: 0
       - name: Install gitleaks
         run: |
-          url="$(curl -sSf https://api.github.com/repos/gitleaks/gitleaks/releases/latest \
-            | grep browser_download_url | grep linux_x64.tar.gz | head -1 | cut -d'"' -f4)"
-          curl -sSfL "$url" | sudo tar -xz -C /usr/local/bin gitleaks
+          set -euo pipefail
+          archive="/tmp/gitleaks_8.30.1_linux_x64.tar.gz"
+          curl -fsSL "https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz" -o "$archive"
+          echo "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  $archive" | sha256sum -c -
+          tar -xzf "$archive" -C /tmp gitleaks
+          sudo install -m 0755 /tmp/gitleaks /usr/local/bin/gitleaks
       - name: Scan for secrets
         run: gitleaks detect --source . --redact --verbose --no-banner
