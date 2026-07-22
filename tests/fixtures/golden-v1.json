@@ -1,0 +1,25 @@
+{
+  "verify": {
+    "success": true,
+    "challenge_ts": "2026-07-19T00:00:00.000Z",
+    "hostname": "app.example.com",
+    "score": 0.91,
+    "risk": "low",
+    "reasons": ["verified-agent"],
+    "action": "signup",
+    "cdata": "order-42",
+    "agent": {"verified": true, "name": "ExampleBot", "allowlisted": true},
+    "human": {"attested": true, "method": "passkey"}
+  },
+  "classify": {
+    "ok": true,
+    "score": 0.55,
+    "classification": "NEUTRAL",
+    "reasons": ["risky-ip"],
+    "blocked": false
+  },
+  "error": {
+    "success": false,
+    "error-codes": ["invalid-input-response"]
+  }
+}

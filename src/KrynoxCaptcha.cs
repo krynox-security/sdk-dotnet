@@ -25,7 +25,9 @@ public sealed record KrynoxResult(
     IReadOnlyList<string> ErrorCodes,
     IReadOnlyList<string> Reasons,
     KrynoxAgent? Agent,
-    KrynoxHuman? Human);
+    KrynoxHuman? Human,
+    string? Action,
+    string? CData);
 
 /// <summary>Outcome of a feedback report.</summary>
 public sealed record KrynoxFeedback(bool Ok, bool Corrected);
@@ -112,7 +114,9 @@ public sealed class KrynoxCaptcha
             GetArray(el, "error-codes"),
             GetArray(el, "reasons"),
             ParseAgent(el),
-            ParseHuman(el));
+            ParseHuman(el),
+            GetString(el, "action"),
+            GetString(el, "cdata"));
     }
 
     /// <summary>
@@ -146,7 +150,7 @@ public sealed class KrynoxCaptcha
     }
 
     private static KrynoxResult Failed(string code) =>
-        new(false, null, null, null, null, new[] { code }, Array.Empty<string>(), null, null);
+        new(false, null, null, null, null, new[] { code }, Array.Empty<string>(), null, null, null, null);
 
     private string Derive(string path) =>
         _endpoint.EndsWith("/siteverify", StringComparison.Ordinal)

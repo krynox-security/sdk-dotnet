@@ -67,7 +67,7 @@ await krynox.FeedbackAsync("bot", suspiciousIp);
 - `ClassifyAsync(text?, fields?, ip?) → Task<KrynoxClassification>`
 - `FeedbackAsync(label, ip?, note?) → Task<KrynoxFeedback>` — `label` is `"human"` or `"bot"`
 
-`KrynoxResult`: `Success`, `Score`, `Risk`, `Hostname`, `ChallengeTs`, `ErrorCodes`, `Reasons`, `Agent`, `Human`
+`KrynoxResult`: `Success`, `Score`, `Risk`, `Hostname`, `ChallengeTs`, `Action`, `CData`, `ErrorCodes`, `Reasons`, `Agent`, `Human`
 `KrynoxClassification`: `Ok`, `Score`, `Classification`, `Reasons`, `Blocked`, `ErrorCodes`.
 Error codes: `KrynoxErrorCode.RateLimited`, etc.
 
