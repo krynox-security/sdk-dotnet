@@ -21,6 +21,27 @@ permissions:
   contents: read
 
 jobs:
+  dependency-audit:
+    name: Dependency Audit (NuGet)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Resolve dependencies
+        run: dotnet restore KrynoxCaptcha.csproj
+      - name: Produce vulnerability report
+        run: dotnet list KrynoxCaptcha.csproj package --vulnerable --include-transitive --format json > vulnerable-packages.json
+      - name: Gate on any vulnerable package
+        run: |
+          count="$(jq '[.. | objects | .vulnerabilities? // empty | length] | add // 0' vulnerable-packages.json)"
+          echo "Known vulnerable NuGet packages: $count"
+          test "$count" -eq 0
+
   opengrep:
     name: OpenGrep (SAST)
     runs-on: ubuntu-latest
