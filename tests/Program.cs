@@ -1,6 +1,7 @@
 using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.Net;
+using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
@@ -25,7 +26,8 @@ Console.WriteLine("golden contract v1: ok");
 // .WhenWritingNull only applies to POCO properties, so absent optionals are
 // serialized as explicit null), 500→200 and 429→200 retries with a stable
 // idempotency key, exhausted retries, timeout, API failure parsing,
-// classify()/feedback(), and "honeypot"/"sitekey" never sent.
+// classify()/feedback(), the User-Agent header, both derived-URL shapes, and
+// "honeypot"/"sitekey" never sent.
 // ---------------------------------------------------------------------------
 const string Secret = "kcps_test_secret";
 var goldenVerify = golden.GetProperty("verify").GetRawText();
@@ -41,7 +43,7 @@ int port;
 }
 var baseUrl = $"http://127.0.0.1:{port}";
 
-var recorded = new ConcurrentQueue<(string Path, string Body)>();
+var recorded = new ConcurrentQueue<(string Path, string Body, string? UserAgent)>();
 var hits = new ConcurrentDictionary<string, int>();
 var listener = new HttpListener();
 listener.Prefixes.Add(baseUrl + "/");
@@ -60,7 +62,7 @@ _ = Task.Run(async () =>
             string reqBody;
             using (var reader = new StreamReader(ctx.Request.InputStream, Encoding.UTF8))
                 reqBody = await reader.ReadToEndAsync();
-            recorded.Enqueue((path, reqBody));
+            recorded.Enqueue((path, reqBody, ctx.Request.Headers["User-Agent"]));
             var n = hits.AddOrUpdate(path, 1, (_, v) => v + 1);
             var (status, payload) = path switch
             {
@@ -70,8 +72,11 @@ _ = Task.Run(async () =>
                 "/retry429" => n == 1 ? (429, """{"error":"rate-limited"}""") : (200, goldenVerify),
                 "/exhaust" => (500, "boom"), // non-JSON body → SDK yields request-failed
                 "/slow" => (0, goldenVerify), // sentinel: delay below, then 200
-                "/classify" => (200, goldenClassify),
-                "/feedback" => (200, """{"ok":true,"corrected":true}"""),
+                // Both derived-URL shapes: `<base>/siteverify` collapses to `<base>/classify`,
+                // while a plain base endpoint (`/base`, with or without a trailing slash)
+                // appends to give `/base/classify`.
+                "/classify" or "/base/classify" => (200, goldenClassify),
+                "/feedback" or "/base/feedback" => (200, """{"ok":true,"corrected":true}"""),
                 _ => (404, """{"error":"not-found"}"""),
             };
             if (status == 0) { await Task.Delay(1500); status = 200; }
@@ -92,8 +97,8 @@ static void Check(bool condition, string what)
 {
     if (!condition) throw new Exception("integration: " + what);
 }
-List<(string Path, string Body)> At(string path) => recorded.Where(r => r.Path == path).ToList();
-static JsonElement BodyOf((string Path, string Body) req) => JsonDocument.Parse(req.Body).RootElement.Clone();
+List<(string Path, string Body, string? UserAgent)> At(string path) => recorded.Where(r => r.Path == path).ToList();
+static JsonElement BodyOf((string Path, string Body, string? UserAgent) req) => JsonDocument.Parse(req.Body).RootElement.Clone();
 static string[] Keys(JsonElement el) => el.EnumerateObject().Select(p => p.Name).ToArray();
 
 // 1. happy path — golden fixture parsing + exact body keys (null keys omitted)
@@ -177,6 +182,32 @@ var fBody = BodyOf(fReqs[0]);
 Check(Keys(fBody).SequenceEqual(new[] { "secret", "label", "ip", "note" }), "feedback: exact body keys");
 Check(fBody.GetProperty("note").ValueKind == JsonValueKind.Null, "feedback: explicit null note when absent");
 
+// 9. derived URLs — both endpoint shapes
+// (a) a /siteverify endpoint with a trailing slash still collapses to the sibling path
+var sdkSlash = new KrynoxCaptcha(Secret, baseUrl + "/siteverify/", TimeSpan.FromSeconds(2), retries: 0);
+Check((await sdkSlash.ClassifyAsync(text: "spam")).Ok, "derive: trailing-slash /siteverify → /classify");
+Check(At("/classify").Count == 2, "derive: trailing slash collapsed to /classify");
+Check((await sdkSlash.FeedbackAsync("bot")).Ok, "derive: trailing-slash /siteverify → /feedback");
+Check(At("/feedback").Count == 2, "derive: trailing slash collapsed to /feedback");
+
+// (b) a plain base endpoint appends the path — it must NOT keep POSTing at the verify URL
+foreach (var baseEndpoint in new[] { baseUrl + "/base", baseUrl + "/base/" })
+{
+    var sdkBase = new KrynoxCaptcha(Secret, baseEndpoint, TimeSpan.FromSeconds(2), retries: 0);
+    Check((await sdkBase.ClassifyAsync(text: "spam")).Ok, $"derive: base URL → /base/classify ({baseEndpoint})");
+    Check((await sdkBase.FeedbackAsync("bot")).Ok, $"derive: base URL → /base/feedback ({baseEndpoint})");
+}
+Check(At("/base/classify").Count == 2, "derive: /base/classify hit twice");
+Check(At("/base/feedback").Count == 2, "derive: /base/feedback hit twice");
+Check(At("/base").Count == 0, "derive: a base endpoint is never POSTed a classify payload");
+
+// 10. User-Agent — exact value, and the const cannot drift from the csproj <Version>
+Check(KrynoxCaptcha.UserAgent == "krynox-captcha-dotnet/0.1.0", "ua: exact constant");
+var informational = typeof(KrynoxCaptcha).Assembly
+    .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion ?? "";
+Check(informational.Split('+')[0] == KrynoxCaptcha.Version, $"ua: Version tracks the csproj <Version> (assembly says '{informational}')");
+Check(recorded.All(req => req.UserAgent == KrynoxCaptcha.UserAgent), "ua: sent on every request so far");
+
 // 5. timeout — per-attempt CancellationTokenSource cuts off the slow handler
 var sdkSlow = new KrynoxCaptcha(Secret, baseUrl + "/slow", TimeSpan.FromMilliseconds(300), retries: 0);
 var sw = Stopwatch.StartNew();
@@ -185,10 +216,11 @@ sw.Stop();
 Check(!r.Success && r.ErrorCodes.SequenceEqual(new[] { KrynoxErrorCode.RequestFailed }), "timeout: request-failed");
 Check(sw.ElapsedMilliseconds < 1400, "timeout: cancelled by the per-attempt timeout, not the 1.5 s slow handler");
 
-// 8. "honeypot" (and "sitekey") never sent
+// 8. "honeypot" (and "sitekey") never sent, and every request carried the User-Agent
 var all = recorded.ToArray();
-Check(all.Length >= 10, "sanity: requests were recorded");
+Check(all.Length >= 18, "sanity: requests were recorded");
 Check(all.All(req => !req.Body.Contains("honeypot") && !req.Body.Contains("sitekey")), "honeypot/sitekey never sent");
+Check(all.All(req => req.UserAgent == KrynoxCaptcha.UserAgent), "User-Agent sent on every request");
 
 listener.Stop();
-Console.WriteLine("integration tests: ok (8 scenarios)");
+Console.WriteLine("integration tests: ok (10 scenarios)");

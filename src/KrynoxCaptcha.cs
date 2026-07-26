@@ -66,6 +66,12 @@ public sealed class KrynoxCaptcha
 {
     public const string DefaultEndpoint = "https://api.krynox.net/siteverify";
 
+    /// <summary>Package version — kept in lockstep with the csproj &lt;Version&gt; (asserted by a test).</summary>
+    public const string Version = "0.1.0";
+
+    /// <summary>Sent as <c>User-Agent</c> on every request, so the API can attribute traffic to SDK + version.</summary>
+    public const string UserAgent = "krynox-captcha-dotnet/" + Version;
+
     private static readonly HttpClient Http = new();
     private static readonly JsonSerializerOptions JsonOpts =
         new() { DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull };
@@ -152,10 +158,18 @@ public sealed class KrynoxCaptcha
     private static KrynoxResult Failed(string code) =>
         new(false, null, null, null, null, new[] { code }, Array.Empty<string>(), null, null, null, null);
 
-    private string Derive(string path) =>
-        _endpoint.EndsWith("/siteverify", StringComparison.Ordinal)
-            ? _endpoint[..^"/siteverify".Length] + path
-            : _endpoint;
+    /// <summary>
+    /// Derive a sibling endpoint ("/classify", "/feedback") from the configured verify endpoint.
+    /// An endpoint ending in <c>/siteverify</c> (a trailing slash is ignored) has that suffix
+    /// replaced; anything else is treated as a base URL and the path is appended.
+    /// </summary>
+    private string Derive(string path)
+    {
+        var root = _endpoint.EndsWith("/", StringComparison.Ordinal) ? _endpoint[..^1] : _endpoint;
+        if (root.EndsWith("/siteverify", StringComparison.Ordinal))
+            root = root[..^"/siteverify".Length];
+        return root + path;
+    }
 
     private static string RandomKey() => Convert.ToHexString(RandomNumberGenerator.GetBytes(16)).ToLowerInvariant();
 
@@ -169,7 +183,9 @@ public sealed class KrynoxCaptcha
             {
                 using var cts = new CancellationTokenSource(_timeout);
                 using var content = new StringContent(json, Encoding.UTF8, "application/json");
-                using var res = await Http.PostAsync(url, content, cts.Token).ConfigureAwait(false);
+                using var req = new HttpRequestMessage(HttpMethod.Post, url) { Content = content };
+                req.Headers.UserAgent.ParseAdd(UserAgent);
+                using var res = await Http.SendAsync(req, cts.Token).ConfigureAwait(false);
                 var status = (int)res.StatusCode;
                 if ((status == 429 || status >= 500) && attempt < _retries)
                 {

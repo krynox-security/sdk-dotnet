@@ -71,6 +71,11 @@ await krynox.FeedbackAsync("bot", suspiciousIp);
 `KrynoxClassification`: `Ok`, `Score`, `Classification`, `Reasons`, `Blocked`, `ErrorCodes`.
 Error codes: `KrynoxErrorCode.RateLimited`, etc.
 
-Self-hosting? Pass an endpoint like `https://captcha.your-domain/siteverify`.
+Self-hosting? Pass an endpoint like `https://captcha.your-domain/siteverify`, or just the base
+URL `https://captcha.your-domain`. `ClassifyAsync` and `FeedbackAsync` derive their URLs from it:
+a `/siteverify` suffix is replaced, otherwise the path is appended.
+
+Every request carries `User-Agent: krynox-captcha-dotnet/0.1.0` (`KrynoxCaptcha.UserAgent`), so
+API traffic is attributable to SDK and version.
 
 MIT licensed. Docs: <https://docs.krynox.net>

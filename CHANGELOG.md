@@ -25,12 +25,28 @@ First release.
 - Automatic retries on transient failures (network, `429`, `5xx`), each carrying
   a per-verify idempotency key so a retried single-use token replays the first
   outcome instead of failing.
-- Configurable API host for self-hosted deployments.
+- Configurable API host for self-hosted deployments — either a full verify URL
+  ending in `/siteverify` or a plain base URL. `ClassifyAsync` and
+  `FeedbackAsync` derive their URLs from it: a `/siteverify` suffix (a trailing
+  slash is ignored) is replaced, otherwise the path is appended to the base.
+  Previously a base URL was left unchanged, so a classify payload was POSTed at
+  the verify endpoint.
+- `User-Agent: krynox-captcha-dotnet/<version>` on every request (verify,
+  classify, feedback), so API traffic is attributable to SDK and version.
 - Targets .NET 8.
 
 ### Notes
 
 - The seven SDKs are held to one shared response contract, enforced by a
   byte-identical golden fixture and a contract test in every language.
+- `KrynoxCaptcha.Version` (the source of the `User-Agent`) is asserted against
+  the assembly informational version — i.e. the csproj `<Version>` — by a test,
+  so the two cannot drift.
+- Request bodies are built as `Dictionary<string, object?>`, and
+  `JsonIgnoreCondition.WhenWritingNull` only applies to POCO properties, so
+  absent optionals (`remoteip`, `note`, `fields`, …) are serialized as explicit
+  JSON `null` rather than omitted. This is known and intended: the data plane
+  treats an explicit `null` exactly as an absent key. It is a cosmetic
+  wire-level difference from the other SDKs — please don't "fix" it.
 
 [0.1.0]: https://github.com/krynox-security/sdk-dotnet/releases/tag/v0.1.0
