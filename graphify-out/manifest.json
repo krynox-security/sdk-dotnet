@@ -1,0 +1,52 @@
+{
+  "KrynoxCaptcha.csproj": {
+    "mtime": 1784713631.472753,
+    "ast_hash": "ba14cd4e4ec75c48b31c8bba2510ffc0",
+    "semantic_hash": "ba14cd4e4ec75c48b31c8bba2510ffc0"
+  },
+  "src/KrynoxCaptcha.cs": {
+    "mtime": 1785091660.124509,
+    "ast_hash": "1e2fde30e4252c577d3eaf581c4fa9c1",
+    "semantic_hash": "1e2fde30e4252c577d3eaf581c4fa9c1"
+  },
+  "tests/KrynoxCaptcha.ContractTests.csproj": {
+    "mtime": 1784711264.6055005,
+    "ast_hash": "b3bccfcde31e6d72b2926f698af36588",
+    "semantic_hash": "b3bccfcde31e6d72b2926f698af36588"
+  },
+  "tests/Program.cs": {
+    "mtime": 1785091704.6347039,
+    "ast_hash": "0806e54218eda6bc07bdd7b321ed5eb1",
+    "semantic_hash": "0806e54218eda6bc07bdd7b321ed5eb1"
+  },
+  "tests/fixtures/golden-v1.json": {
+    "mtime": 1784711264.6055005,
+    "ast_hash": "9bc84d8c56fffa4645bf848f13362069",
+    "semantic_hash": "9bc84d8c56fffa4645bf848f13362069"
+  },
+  ".github/workflows/ci.yml": {
+    "mtime": 1784711264.6017213,
+    "ast_hash": "15be027ac1ae923f3af187744abf1aef",
+    "semantic_hash": ""
+  },
+  ".github/workflows/release.yml": {
+    "mtime": 1784711264.6017213,
+    "ast_hash": "4bf2718c101fc8f444fc26384b0094fc",
+    "semantic_hash": ""
+  },
+  ".github/workflows/security.yml": {
+    "mtime": 1784954618.5588617,
+    "ast_hash": "7f44bd364aef1407ba32e5004e681270",
+    "semantic_hash": ""
+  },
+  "CHANGELOG.md": {
+    "mtime": 1785091724.941793,
+    "ast_hash": "41a885659dac5dbb575c228a1f1d5d5e",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1785091716.3537552,
+    "ast_hash": "6bcd052f7c0695ec609e95234b049af1",
+    "semantic_hash": ""
+  }
+}

@@ -1,0 +1,4 @@
+[mcp_servers.graphify]
+command = "graphify-mcp"
+args = ["./graphify-out/graph.json"]
+enabled = true
