@@ -1,0 +1,1810 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "KrynoxCaptcha.csproj",
+      "file_type": "code",
+      "source_file": "KrynoxCaptcha.csproj",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "krynoxcaptcha",
+      "community": 5,
+      "community_name": "KrynoxCaptcha.csproj",
+      "norm_label": "krynoxcaptcha.csproj"
+    },
+    {
+      "label": "net8.0",
+      "file_type": "concept",
+      "source_file": "KrynoxCaptcha.csproj",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "krynoxcaptcha_csproj_framework_net8_0",
+      "community": 5,
+      "community_name": "KrynoxCaptcha.csproj",
+      "norm_label": "net8.0"
+    },
+    {
+      "label": "Microsoft.NET.Sdk",
+      "file_type": "concept",
+      "source_file": "KrynoxCaptcha.csproj",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "krynoxcaptcha_csproj_sdk_microsoft_net_sdk",
+      "community": 5,
+      "community_name": "KrynoxCaptcha.csproj",
+      "norm_label": "microsoft.net.sdk"
+    },
+    {
+      "label": "KrynoxCaptcha.cs",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha",
+      "community": 0,
+      "community_name": "KrynoxCaptcha.cs",
+      "norm_label": "krynoxcaptcha.cs"
+    },
+    {
+      "label": "Krynox.Captcha",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L10",
+      "type": "namespace",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "Krynox.Captcha"
+      },
+      "_origin": "ast",
+      "id": "csharp_namespace:a117a32eda1b048a",
+      "community": 0,
+      "community_name": "KrynoxCaptcha.cs",
+      "norm_label": "krynox.captcha"
+    },
+    {
+      "label": "KrynoxAgent",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L13",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxagent",
+      "community": 0,
+      "community_name": "KrynoxCaptcha.cs",
+      "norm_label": "krynoxagent"
+    },
+    {
+      "label": "KrynoxHuman",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L16",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxhuman",
+      "community": 0,
+      "community_name": "KrynoxCaptcha.cs",
+      "norm_label": "krynoxhuman"
+    },
+    {
+      "label": "KrynoxResult",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L19",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxresult",
+      "community": 3,
+      "community_name": ".VerifyAsync",
+      "norm_label": "krynoxresult"
+    },
+    {
+      "label": "KrynoxFeedback",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L33",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxfeedback",
+      "community": 0,
+      "community_name": "KrynoxCaptcha.cs",
+      "norm_label": "krynoxfeedback"
+    },
+    {
+      "label": "KrynoxClassification",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L36",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxclassification",
+      "community": 0,
+      "community_name": "KrynoxCaptcha.cs",
+      "norm_label": "krynoxclassification"
+    },
+    {
+      "label": "KrynoxErrorCode",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L45",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxerrorcode",
+      "community": 0,
+      "community_name": "KrynoxCaptcha.cs",
+      "norm_label": "krynoxerrorcode"
+    },
+    {
+      "label": "string",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "string",
+      "community": 0,
+      "community_name": "KrynoxCaptcha.cs",
+      "norm_label": "string"
+    },
+    {
+      "label": "KrynoxCaptcha",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L65",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "community": 1,
+      "community_name": "KrynoxCaptcha",
+      "norm_label": "krynoxcaptcha"
+    },
+    {
+      "label": "HttpClient",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "httpclient",
+      "community": 1,
+      "community_name": "KrynoxCaptcha",
+      "norm_label": "httpclient"
+    },
+    {
+      "label": "JsonSerializerOptions",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "jsonserializeroptions",
+      "community": 1,
+      "community_name": "KrynoxCaptcha",
+      "norm_label": "jsonserializeroptions"
+    },
+    {
+      "label": "TimeSpan",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "timespan",
+      "community": 1,
+      "community_name": "KrynoxCaptcha",
+      "norm_label": "timespan"
+    },
+    {
+      "label": "int",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "int",
+      "community": 1,
+      "community_name": "KrynoxCaptcha",
+      "norm_label": "int"
+    },
+    {
+      "label": ".VerifyAsync()",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L95",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_verifyasync",
+      "community": 3,
+      "community_name": ".VerifyAsync",
+      "norm_label": ".verifyasync()"
+    },
+    {
+      "label": "Task",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "task",
+      "community": 1,
+      "community_name": "KrynoxCaptcha",
+      "norm_label": "task"
+    },
+    {
+      "label": ".FeedbackAsync()",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L132",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_feedbackasync",
+      "community": 1,
+      "community_name": "KrynoxCaptcha",
+      "norm_label": ".feedbackasync()"
+    },
+    {
+      "label": ".ClassifyAsync()",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L141",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_classifyasync",
+      "community": 1,
+      "community_name": "KrynoxCaptcha",
+      "norm_label": ".classifyasync()"
+    },
+    {
+      "label": "IReadOnlyDictionary",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "ireadonlydictionary",
+      "community": 1,
+      "community_name": "KrynoxCaptcha",
+      "norm_label": "ireadonlydictionary"
+    },
+    {
+      "label": ".Failed()",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L158",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_failed",
+      "community": 3,
+      "community_name": ".VerifyAsync",
+      "norm_label": ".failed()"
+    },
+    {
+      "label": ".Derive()",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L166",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_derive",
+      "community": 1,
+      "community_name": "KrynoxCaptcha",
+      "norm_label": ".derive()"
+    },
+    {
+      "label": ".RandomKey()",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L174",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_randomkey",
+      "community": 3,
+      "community_name": ".VerifyAsync",
+      "norm_label": ".randomkey()"
+    },
+    {
+      "label": ".PostAsync()",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L177",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_postasync",
+      "community": 1,
+      "community_name": "KrynoxCaptcha",
+      "norm_label": ".postasync()"
+    },
+    {
+      "label": "JsonElement",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "jsonelement",
+      "community": 3,
+      "community_name": ".VerifyAsync",
+      "norm_label": "jsonelement"
+    },
+    {
+      "label": ".Backoff()",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L208",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_backoff",
+      "community": 1,
+      "community_name": "KrynoxCaptcha",
+      "norm_label": ".backoff()"
+    },
+    {
+      "label": ".ParseAgent()",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L211",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_parseagent",
+      "community": 3,
+      "community_name": ".VerifyAsync",
+      "norm_label": ".parseagent()"
+    },
+    {
+      "label": ".ParseHuman()",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L217",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_parsehuman",
+      "community": 3,
+      "community_name": ".VerifyAsync",
+      "norm_label": ".parsehuman()"
+    },
+    {
+      "label": ".GetBool()",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L223",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getbool",
+      "community": 3,
+      "community_name": ".VerifyAsync",
+      "norm_label": ".getbool()"
+    },
+    {
+      "label": ".GetDouble()",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L226",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getdouble",
+      "community": 3,
+      "community_name": ".VerifyAsync",
+      "norm_label": ".getdouble()"
+    },
+    {
+      "label": ".GetString()",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L229",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getstring",
+      "community": 3,
+      "community_name": ".VerifyAsync",
+      "norm_label": ".getstring()"
+    },
+    {
+      "label": ".GetArray()",
+      "file_type": "code",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L232",
+      "metadata": {
+        "namespace": "Krynox.Captcha",
+        "scope_chain": [
+          "s205"
+        ]
+      },
+      "_origin": "ast",
+      "id": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getarray",
+      "community": 3,
+      "community_name": ".VerifyAsync",
+      "norm_label": ".getarray()"
+    },
+    {
+      "label": "IReadOnlyList",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "ireadonlylist",
+      "community": 3,
+      "community_name": ".VerifyAsync",
+      "norm_label": "ireadonlylist"
+    },
+    {
+      "label": "KrynoxCaptcha.ContractTests.csproj",
+      "file_type": "code",
+      "source_file": "tests/KrynoxCaptcha.ContractTests.csproj",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "tests_krynoxcaptcha_contracttests",
+      "community": 5,
+      "community_name": "KrynoxCaptcha.csproj",
+      "norm_label": "krynoxcaptcha.contracttests.csproj"
+    },
+    {
+      "label": "net8.0",
+      "file_type": "concept",
+      "source_file": "tests/KrynoxCaptcha.ContractTests.csproj",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "tests_krynoxcaptcha_contracttests_csproj_framework_net8_0",
+      "community": 5,
+      "community_name": "KrynoxCaptcha.csproj",
+      "norm_label": "net8.0"
+    },
+    {
+      "label": "Microsoft.NET.Sdk",
+      "file_type": "concept",
+      "source_file": "tests/KrynoxCaptcha.ContractTests.csproj",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "tests_krynoxcaptcha_contracttests_csproj_sdk_microsoft_net_sdk",
+      "community": 5,
+      "community_name": "KrynoxCaptcha.csproj",
+      "norm_label": "microsoft.net.sdk"
+    },
+    {
+      "label": "Program.cs",
+      "file_type": "code",
+      "source_file": "tests/Program.cs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_program",
+      "community": 0,
+      "community_name": "KrynoxCaptcha.cs",
+      "norm_label": "program.cs"
+    },
+    {
+      "label": "CHANGELOG.md",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "changelog",
+      "community": 4,
+      "community_name": "[0.1.0] - 2026-07-22",
+      "norm_label": "changelog.md"
+    },
+    {
+      "label": "Changelog",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "changelog_changelog",
+      "community": 4,
+      "community_name": "[0.1.0] - 2026-07-22",
+      "norm_label": "changelog"
+    },
+    {
+      "label": "[Unreleased]",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "changelog_unreleased",
+      "community": 4,
+      "community_name": "[0.1.0] - 2026-07-22",
+      "norm_label": "[unreleased]"
+    },
+    {
+      "label": "[0.1.0] - 2026-07-22",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "changelog_0_1_0_2026_07_22",
+      "community": 4,
+      "community_name": "[0.1.0] - 2026-07-22",
+      "norm_label": "[0.1.0] - 2026-07-22"
+    },
+    {
+      "label": "Added",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "changelog_added",
+      "community": 4,
+      "community_name": "[0.1.0] - 2026-07-22",
+      "norm_label": "added"
+    },
+    {
+      "label": "Notes",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "changelog_notes",
+      "community": 4,
+      "community_name": "[0.1.0] - 2026-07-22",
+      "norm_label": "notes"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme",
+      "community": 2,
+      "community_name": "Krynox.Captcha (.NET)",
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Krynox.Captcha (.NET)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_krynox_captcha_net",
+      "community": 2,
+      "community_name": "Krynox.Captcha (.NET)",
+      "norm_label": "krynox.captcha (.net)"
+    },
+    {
+      "label": "Reasons, agents & attested humans",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "readme_reasons_agents_attested_humans",
+      "community": 2,
+      "community_name": "Krynox.Captcha (.NET)",
+      "norm_label": "reasons, agents & attested humans"
+    },
+    {
+      "label": "Content classification (spam/abuse)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "readme_content_classification_spam_abuse",
+      "community": 2,
+      "community_name": "Krynox.Captcha (.NET)",
+      "norm_label": "content classification (spam/abuse)"
+    },
+    {
+      "label": "Reliability",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "readme_reliability",
+      "community": 2,
+      "community_name": "Krynox.Captcha (.NET)",
+      "norm_label": "reliability"
+    },
+    {
+      "label": "Feedback (false-positive correction)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "readme_feedback_false_positive_correction",
+      "community": 2,
+      "community_name": "Krynox.Captcha (.NET)",
+      "norm_label": "feedback (false-positive correction)"
+    },
+    {
+      "label": "API",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "readme_api",
+      "community": 2,
+      "community_name": "Krynox.Captcha (.NET)",
+      "norm_label": "api"
+    }
+  ],
+  "links": [
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "KrynoxCaptcha.csproj",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "krynoxcaptcha",
+      "target": "krynoxcaptcha_csproj_framework_net8_0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "KrynoxCaptcha.csproj",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "krynoxcaptcha",
+      "target": "krynoxcaptcha_csproj_sdk_microsoft_net_sdk",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/KrynoxCaptcha.ContractTests.csproj",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_krynoxcaptcha_contracttests",
+      "target": "krynoxcaptcha",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha",
+      "target": "csharp_namespace:a117a32eda1b048a",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxagent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxclassification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxerrorcode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxfeedback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxhuman",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/Program.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Krynox.Captcha",
+        "scope_kind": "file"
+      },
+      "_origin": "ast",
+      "source": "tests_program",
+      "target": "csharp_namespace:a117a32eda1b048a",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L211",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "KrynoxAgent"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_parseagent",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxagent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L217",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "KrynoxHuman"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_parsehuman",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxhuman",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L158",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "KrynoxResult"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_failed",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L95",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "KrynoxResult"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_verifyasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L132",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "KrynoxFeedback"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_feedbackasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxfeedback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L141",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "KrynoxClassification"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_classifyasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxclassification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L52",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "string"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxerrorcode",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L80",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "string"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "HttpClient"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "httpclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L82",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "int"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "int",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L76",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "JsonSerializerOptions"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "jsonserializeroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L208",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_backoff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L141",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_classifyasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L166",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_derive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L158",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_failed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L132",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_feedbackasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L232",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getarray",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L223",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getbool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L226",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getdouble",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L229",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getstring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L211",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_parseagent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L217",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_parsehuman",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L177",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_postasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L174",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_randomkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L95",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_verifyasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L81",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "TimeSpan"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha",
+      "target": "timespan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L208",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "TimeSpan"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_backoff",
+      "target": "timespan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_verifyasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_failed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L120",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_verifyasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getarray",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L115",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_verifyasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getbool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L116",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_verifyasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getdouble",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_verifyasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getstring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L122",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_verifyasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_parseagent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L123",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_verifyasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_parsehuman",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L110",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_verifyasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_postasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L102",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_verifyasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_randomkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L95",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_verifyasync",
+      "target": "task",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L141",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_classifyasync",
+      "target": "task",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L132",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_feedbackasync",
+      "target": "task",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L177",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_postasync",
+      "target": "task",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L135",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_feedbackasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_derive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L137",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_feedbackasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getbool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L135",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_feedbackasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_postasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L141",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "IReadOnlyDictionary"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_classifyasync",
+      "target": "ireadonlydictionary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L145",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_classifyasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_derive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L153",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_classifyasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getarray",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L150",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_classifyasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getbool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L151",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_classifyasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getdouble",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L152",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_classifyasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getstring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L145",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_classifyasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_postasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L177",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "JsonElement"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_postasync",
+      "target": "jsonelement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L192",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_postasync",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_backoff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L232",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "JsonElement"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getarray",
+      "target": "jsonelement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L223",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "JsonElement"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getbool",
+      "target": "jsonelement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L226",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "JsonElement"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getdouble",
+      "target": "jsonelement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L229",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "JsonElement"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getstring",
+      "target": "jsonelement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L211",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "JsonElement"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_parseagent",
+      "target": "jsonelement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L217",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "JsonElement"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_parsehuman",
+      "target": "jsonelement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L214",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_parseagent",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getbool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L214",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_parseagent",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getstring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L220",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_parsehuman",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getbool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L220",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_parsehuman",
+      "target": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getstring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/KrynoxCaptcha.cs",
+      "source_location": "L232",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "IReadOnlyList"
+      },
+      "_origin": "ast",
+      "source": "src_krynoxcaptcha_krynox_captcha_krynoxcaptcha_getarray",
+      "target": "ireadonlylist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/KrynoxCaptcha.ContractTests.csproj",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_krynoxcaptcha_contracttests",
+      "target": "tests_krynoxcaptcha_contracttests_csproj_framework_net8_0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/KrynoxCaptcha.ContractTests.csproj",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_krynoxcaptcha_contracttests",
+      "target": "tests_krynoxcaptcha_contracttests_csproj_sdk_microsoft_net_sdk",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "changelog",
+      "target": "changelog_changelog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "changelog_changelog",
+      "target": "changelog_0_1_0_2026_07_22",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "changelog_changelog",
+      "target": "changelog_unreleased",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "changelog_0_1_0_2026_07_22",
+      "target": "changelog_added",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "changelog_0_1_0_2026_07_22",
+      "target": "changelog_notes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "readme_krynox_captcha_net",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_krynox_captcha_net",
+      "target": "readme_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_krynox_captcha_net",
+      "target": "readme_content_classification_spam_abuse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_krynox_captcha_net",
+      "target": "readme_feedback_false_positive_correction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_krynox_captcha_net",
+      "target": "readme_reasons_agents_attested_humans",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_krynox_captcha_net",
+      "target": "readme_reliability",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "ae9c586345d6ae26d3af89b7220d7647f0c25965"
+}
